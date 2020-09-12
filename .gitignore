@@ -39,7 +39,7 @@ TAGS
 .vscode/
 
 # cmake build
-./Makefile
+Makefile
 CMakeCache.txt
 cmake_install.cmake
 CMakeFiles
