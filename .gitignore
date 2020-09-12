@@ -42,3 +42,6 @@ Makefile
 CMakeCache.txt
 cmake_install.cmake
 CMakeFiles
+
+# configure build cache
+__pycache__
