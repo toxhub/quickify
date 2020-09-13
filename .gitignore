@@ -46,3 +46,6 @@ CMakeFiles
 
 # configure build cache
 __pycache__
+
+# keep deps Makefile
+!deps/**/Makefile
