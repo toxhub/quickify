@@ -8,7 +8,7 @@ set (QUICKIFY_VERSION_MINOR 1)
 SET(ROOT_DIR ${CMAKE_SOURCE_DIR})
 SET(DEPS_QUICHE_SRC ${ROOT_DIR}/deps/quiche/build)
 
-INCLUDE_DIRECTORIES(${ROOT_DIR}/deps/quiche/build/include)
+INCLUDE_DIRECTORIES(${DEPS_QUICHE_SRC}/include)
 add_library(libquiche STATIC IMPORTED)
 set_target_properties(libquiche PROPERTIES IMPORTED_LOCATION ${DEPS_QUICHE_SRC}/target/release/libquiche.a)
 
