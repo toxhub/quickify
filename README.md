@@ -1,5 +1,5 @@
 # QuickIFY
-C++ based HTTP3/QUIC Client
+C++ based HTTP/3 Client
 
 ## Dependencies
 - [libuv](https://github.com/libuv/libuv) - Cross-platform asynchronous I/O
