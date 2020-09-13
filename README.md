@@ -1,6 +1,10 @@
 # QuickIFY
 C++ based HTTP3/QUIC Client
 
+## Dependencies
+- [libuv](https://github.com/libuv/libuv) - Cross-platform asynchronous I/O
+- [quiche](https://github.com/cloudflare/quiche) - Implementation of the QUIC transport protocol and HTTP/3
+
 ## Build
 
 ### Fetch source code
