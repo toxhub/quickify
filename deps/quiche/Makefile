@@ -10,7 +10,7 @@ $(BUILD):
 	[ -d $(BUILD) ] || mkdir -p $(BUILD)
 	git clone --recursive $(URL) --branch $(VERSION) $(BUILD)
 	cd $(BUILD) && \
-	cargo build --release --features pkg-config-meta,qlog && \
+	cargo build --release && \
 	mkdir deps/boringssl/src/lib && \
 	ln -vnf $(find target/release -name libcrypto.a -o -name libssl.a) deps/boringssl/src/lib/
 
