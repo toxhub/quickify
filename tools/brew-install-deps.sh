@@ -2,7 +2,6 @@ brew update
 
 PKGS="
   cmake
-  rust
   "
 
 for pkg in $PKGS
