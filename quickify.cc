@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include <uv.h>
+#include <nghttp3/nghttp3.h>
+#include <nghttp3/version.h>
 
 static void recv(uv_timer_t* req) {
   fprintf(stdout, "recv message\n");
