@@ -11,8 +11,7 @@ $(BUILD):
 	cd $(BUILD) && \
 	autoreconf -i && \
 	./configure --prefix=$PWD/build --enable-lib-only && \
-	make -j$(nproc) check && \
-	make install
+	make -j$(nproc) check
 
 clean:
 	rm -rf $(BUILD)

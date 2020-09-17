@@ -7,10 +7,10 @@ set (QUICKIFY_VERSION_MINOR 1)
 
 SET(ROOT_DIR ${CMAKE_SOURCE_DIR})
 
-SET(DEPS_NGHTTP3_SRC ${ROOT_DIR}/deps/nghttp3/build)
-INCLUDE_DIRECTORIES(${DEPS_NGHTTP3_SRC}/build/include)
+SET(DEPS_NGHTTP3_SRC ${ROOT_DIR}/deps/nghttp3/build/lib)
+INCLUDE_DIRECTORIES(${DEPS_NGHTTP3_SRC}/includes/)
 add_library(nghttp3 STATIC IMPORTED)
-set_target_properties(nghttp3 PROPERTIES IMPORTED_LOCATION ${DEPS_NGHTTP3_SRC}/build/lib/libnghttp3.a)
+set_target_properties(nghttp3 PROPERTIES IMPORTED_LOCATION ${DEPS_NGHTTP3_SRC}/.libs/libnghttp3.a)
 
 SET(DEPS_LIBUV_SRC ${ROOT_DIR}/deps/libuv/build)
 INCLUDE_DIRECTORIES(${DEPS_LIBUV_SRC}/include)
