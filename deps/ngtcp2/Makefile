@@ -1,7 +1,7 @@
 ROOT=$(abspath .)
 
 BUILD=build
-URL=https://github.com/ngtcp2/nghttp3
+URL=https://github.com/ngtcp2/ngtcp2
 
 all: $(BUILD)
 
@@ -10,7 +10,6 @@ $(BUILD):
 	git clone $(URL) $(BUILD)
 	cd $(BUILD) && \
 	autoreconf -i && \
-	./configure --prefix=$(PWD)/build --enable-lib-only && \
 	make -j$(nproc) check
 
 clean:
