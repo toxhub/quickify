@@ -4,6 +4,7 @@
 #include <uv.h>
 
 #include "nghttp3/nghttp3.h"
+#include "nghttp3/version.h"
 
 static void recv(uv_timer_t* req) {
   fprintf(stdout, "recv message\n");
@@ -12,6 +13,8 @@ static void recv(uv_timer_t* req) {
 int main(int argc, char* argv[]) {
   const char* host = argv[1];
   const char* port = argv[2];
+
+  printf("nghttp3 version: %s\n", NGHTTP3_VERSION);
 
   uv_loop_t* loop = uv_default_loop();
 
