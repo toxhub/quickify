@@ -3,13 +3,20 @@
 
 #include <uv.h>
 #include <openssl/ssl.h>
+#include "session.h"
 
 class Client {
   public:
     Client(uv_loop_t *loop, SSL_CTX *ssl_ctx);
     ~Client();
 
+    int aborted;
+    int closed;
+    int destoryed;
+    int pending;
+
     void close();
+    Session* connect();
 };
 
 
