@@ -7,7 +7,7 @@
 
 class Client {
   public:
-    Client(uv_loop_t *loop, SSL_CTX *ssl_ctx);
+    Client(uv_loop_t *loop);
     ~Client();
 
     int aborted;
@@ -16,7 +16,11 @@ class Client {
     int pending;
 
     void close();
+    int run(const char *addr, const char *port);
     Session* connect();
+
+  private:
+    uv_loop_t *loop_;
 };
 
 
