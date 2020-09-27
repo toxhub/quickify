@@ -1,10 +1,19 @@
 #include "client.h"
-#include <uv.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-Client::Client(uv_loop_t *loop): loop_(loop) {}
+namespace quickify {
 
-Client::~Client() {}
+Client::Client(uv_loop_t *loop): loop_(loop) {
+  printf("Client init\n");
+}
 
-void Client::close() {}
+Client::~Client() {
+  printf("Client destory\n");
+}
 
-int Client::run(const char *addr, const char *port) {}
+int Client::run() {
+  return 0;
+};
+
+}  // namespace quickify

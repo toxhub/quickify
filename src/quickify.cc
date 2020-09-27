@@ -7,9 +7,13 @@
 #include "nghttp3/nghttp3.h"
 #include "nghttp3/version.h"
 
-static void recv(uv_timer_t* req) {
-  fprintf(stdout, "recv message\n");
-}
+#include <iostream>
+
+using namespace quickify;
+
+namespace quickify {
+
+}  // namespace quickify
 
 int main(int argc, char* argv[]) {
   auto addr = argv[1];
@@ -19,11 +23,12 @@ int main(int argc, char* argv[]) {
 
   uv_loop_t* loop = uv_default_loop();
 
-  Client c(loop);
+  Client client(loop);
 
-  if (c.run(addr, port) != 0) {
+  if (client.run() != 0) {
+    fprintf(stderr, "client run failed\n");
     exit(-1);
   }
 
-  return EXIT_SUCCESS;
+  return uv_run(loop, UV_RUN_DEFAULT);
 }
